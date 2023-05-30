@@ -26,8 +26,8 @@ jobs:
       - run:
           name: Install mail utilities
           command: |
-            sudo apt-get update
-            sudo apt-get install -y mailutils
+             apt-get update
+             apt-get install -y mailutils
  # Send JMeter html results via email
       - run:
           name: Send JMeter html results via email
