@@ -9,8 +9,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: ubuntu-2004:current
-    resource_class: medium
+      - image: justb4/jmeter
     # Add steps to the job
     # See: https://circleci.com/docs/configuration-reference/#steps
     steps:
@@ -28,8 +27,7 @@ jobs:
       - run:
           name: Install mail utilities
           command: |
-             sudo apt-get update
-             sudo apt-get install -y mailutils
+             apk add curl install -y mailutils
     
  # Send JMeter html results via email
       - run:
