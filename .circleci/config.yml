@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Send JMeter html results via email
           command: |
-            echo "See attached JMeter html results" | mail -s "JMeter html Test Results" -A /tmp/index.html ndeshmukh0457@gmail.com"
+            echo "See attached JMeter html results" | mail -s "JMeter html Test Results" -A /tmp/index.html ndeshmukh0457@gmail.com
    # Send JMeter csv results via email
       - run:
           name: Send JMeter CSV results via email
