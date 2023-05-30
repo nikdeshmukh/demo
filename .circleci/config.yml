@@ -23,12 +23,6 @@ jobs:
       - store_artifacts:
           path: results
 
-      # Install mail utilities
-      - run:
-          name: Install mail utilities
-          command: |
-             apk add curl install -y mailutils
-    
  # Send JMeter html results via email
       - run:
           name: Send JMeter html results via email
