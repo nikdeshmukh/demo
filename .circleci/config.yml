@@ -23,16 +23,6 @@ jobs:
       - store_artifacts:
           path: results
 
- # Send JMeter html results via email
-      - run:
-          name: Send JMeter html results via email
-          command: |
-            echo "See attached JMeter html results" | mail -s "JMeter html Test Results" -A /tmp/index.html ndeshmukh0457@gmail.com
-   # Send JMeter csv results via email
-      - run:
-          name: Send JMeter CSV results via email
-          command: |
-            echo "See attached JMeter csv results" | mail -s "JMeter CSV Test Results" -A /tmp/results.csv ndeshmukh0457@gmail.com"
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
