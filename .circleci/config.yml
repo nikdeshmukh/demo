@@ -22,6 +22,13 @@ jobs:
           command: "jmeter -n -t SampleTest.jmx -l results/results.csv -e -o results"
       - store_artifacts:
           path: results
+
+      # Install mail utilities
+      - run:
+          name: Install mail utilities
+          command: |
+             apt-get update
+             apt-get install -y mailutils
     
  # Send JMeter html results via email
       - run:
